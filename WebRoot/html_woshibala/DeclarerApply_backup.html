@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" bgcolor="#FFF">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>申请人注册</title>
+<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script language="JavaScript" src="test.js">
+			
+		</script>
+		<style type="text/css">
+footer {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+body {
+	position: relative;
+	color: #000;
+	background: #FFF;
+	text-align: center;
+}
+
+#title1 {
+	position: relative;
+	font-size: 50px;
+	font-style: normal;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light",
+		"Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+	text-align: center;
+	color: #FFF;
+	margin-top: 30px;
+}
+
+#title2 {
+	font-size: 36px;
+	color: #FFF;
+	padding-left: 10px;
+	text-align: center;
+}
+
+table {
+	margin: auto;
+}
+
+#login {
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light",
+		"Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+}
+
+#sub {
+	text-align: center;
+}
+
+#form1 {
+	text-align: center;
+	padding-top: 3px;
+}
+
+#loginwindow {
+	padding-top: 10px;
+}
+
+#password {
+	top: 10px;
+	clip: rect(10px, auto, auto, auto);
+	text-align: center;
+}
+
+.input-group {
+	text-align: center;
+}
+
+#all {
+	margin: auto;
+	text-align: center;
+}
+
+#name {
+	display: none;
+	color: #C03;
+}
+
+#sex {
+	display: none;
+	color: #C03;
+}
+
+#birthday {
+	display: none;
+	color: #C03;
+}
+
+#unitname {
+	display: none;
+	color: #C03;
+}
+
+#div1 {
+	display: none;
+	color: #C03;
+}
+</style>
+		<script language="JavaScript" type="text/JavaScript">
+		<!--
+			var flag0 = false;
+			var flag0 = false;
+			var flag2 = false;
+
+			function checkusername() {
+				if (document.getElementById) {
+					target = document.getElementById('div1');
+					var aaa = document.form1.username.value;
+					//alert(aaa);
+					if (/[\u4e00-\u9fa5]/.test(aaa) || aaa.length > 16
+							|| aaa == null)//判断如果输入用户名是否汉字
+					{
+						target.style.display = "block"; //block 显示
+						flag0 = false;
+					} else {
+						target.style.display = "none";//若不是汉字显示提示内容
+						flag0 = true;//none 不显示
+					}
+				}
+			}
+			function checkname() {
+				target = document.getElementById('name');
+				var aaa = document.form1.name.value;
+				//alert(aaa);
+				aaa = aaa.replace(/(^\s+)|(\s+$)/g, "");
+				if (/^[\u4e00-\u9fa5]{2,6}$/.test(aaa)) {
+					target.style.display = "none";
+					flag1 = true;
+				} else {
+					target.style.display = "block"; //block 显示
+					flag1 = false;//不符合要求
+				}
+			}
+			function checkpassword() {
+				if (document.getElementById) {
+					target = document.getElementById('div2');
+					var aaa = document.form1.password.value;
+					//alert(aaa);
+					if (/[\u4e00-\u9fa5]/.test(aaa) || aaa.length > 16
+							|| aaa == null) {
+						target.style.display = "block";
+						flag1 = false;
+					} else {
+						target.style.display = "none";//若不是汉字显示提示内容
+						flag1 = true;
+					}
+
+				}
+			}
+			function checksubmit() {
+				if (document.getElementById) {
+					target = document.getElementById('div3');
+					var radio0 = document.getElementById('Radio0');
+					var radio1 = document.getElementById('Radio1');
+					var radio2 = document.getElementById('Radio2');
+					if (radio0.checked || radio1.checked || radio2.checked) {
+						flag2 = true;
+						target.style.display = "none";
+					} else {
+						flag = false;
+						target.style.display = "block";
+					}
+				}
+			}
+			-->
+		</script>
+</head>
+
+<body>
+	<div id="all">
+
+		<input type="image" name="imageField" id="imageField"
+			src="picture/科协logo.jpg" />
+		<table width="1250" height="493" border="1">
+			<tr>
+				<td height="98">
+					<div id="login">申报者注册</div>
+				</td>
+
+			</tr>
+			<tr>
+				<td width="17%" height="267" valign="top"><div>
+						<form id="form1" name="form1" method="post" action="">
+							<p>
+								<input type="text" name="username" id="username"
+									placeholder="请输入用户名" class="button-rounded" /> </br>
+								<div id="div1">请输入16个以内数字、字母或符号</div>
+							</p>
+							<p>&nbsp;</p>
+							<input name="name" type="text" placeholder="申报者姓名"
+								class="button-rounded" onblur="checkname()"></br>
+								<div id="name">请输入2~6个汉字</div> </br> 性别 &nbsp; <input type="radio"
+								name="sex" value="1" id="male" />男</label> &nbsp; <input type="radio"
+								name="sex" value="2" id="female" />女</label></br>
+								<div id="sex">请选择性别</div> </br> 出生日期</br> <input type="date"
+								name="birthDay" /><br />
+								<div id="birthday">请选择出生日期</div> <br /> <input name="unitName"
+								type="text" placeholder="工作单位全称" class="button-rounded"><br />
+									<div id="unitname">请填写工作单位</div> <br />
+									<p>
+										<input type="text" name="password" id="password"
+											placeholder="请输入密码" class="button-rounded" />
+										<p>&nbsp;</p>
+										<input type="submit" name="submit" id="submit" value="注 册"
+											class="button button-glow button-border button-rounded button-primary" />
+									</p>
+						</form>
+					</div>
+			</tr>
+			<tr>
+				<td height="120" align="left"><p>
+						<input type="submit" name="signup" id="signup" value="注册成功，点击登陆"
+							class="button button-glow button-border button-rounded button-primary" />
+					</p>
+					<p>&nbsp; </p>
+					<form id="form2" name="form2" method="post" action=""></form></td>
+			</tr>
+		</table>
+	</div>
+</body>
+<footer> &copy; Copyright 2015. woshibala All rights reserved.
+</footer>
+</html>
