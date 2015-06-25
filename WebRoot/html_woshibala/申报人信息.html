@@ -94,8 +94,17 @@ table {
 	}
 	function change4()
 	{
-		document.getElementById("fra").src='申报人信息frame/发表论文和专著情况.html'
+		document.getElementById("fra").src='申报人信息frame/获基金资助情况.html'
 	}
+	function change5()
+	{
+		document.getElementById("fra").src='申报人信息frame/参与重大工程技术项目情况.html'
+	}
+	function change6()
+	{
+		document.getElementById("fra").src='申报人信息frame/科技成果转化科普和科技管理情况.html'
+	}
+	
 
     </script>
     
@@ -126,12 +135,12 @@ table {
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>   
-        <a href="http://www.bootcss.com/" class="button button-block button-rounded button-primary button-large">参与重大工程技术项目情况</a>
+        <a  target="iframe" class="button button-block button-rounded button-primary button-large" onclick="change5()">参与重大工程技术项目情况</a>
       </p>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
       <p>
-      <a href="http://www.bootcss.com/" class="button button-block button-rounded button-primary button-large" >其他情况</a>
+      <a target="iframe" class="button button-block button-rounded button-primary button-large" onclick="change6()" >其他情况</a>
       </p>
      </div>
    
