@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"bgcolor="#FFF" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/button.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script language="JavaScript" src="test.js">
+</script>
+<style type="text/css">
+footer{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color:#999;
+	font-size:14px;
+	margin-bottom:0;}
+body{
+	position:relative;
+	color:#000;
+	background:#FFF;
+	text-align:center;
+	}
+#title1{
+	position: relative;
+	font-size: 50px;
+	font-style: normal;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light", "Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+	text-align: center;
+	color: #FFF;
+	margin-top: 30px;
+}
+#title2{
+	font-size: 36px;
+	color: #FFF;
+	padding-left: 10px;
+	text-align: center;
+	}
+table {
+	margin:auto;
+}
+#login {
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light", "Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+}
+#subtitle{
+	text-align: center;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light", "Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+	font-size:24px;
+}
+#form1{
+	text-align: center;
+	padding-top: 3px;
+	}
+#loginwindow {
+	padding-top: 10px;
+}
+#password {
+	top: 10px;
+	clip: rect(10px,auto,auto,auto);
+}
+#all{
+	margin: auto;
+	text-align: center;	
+}
+#navi{
+	margin:auto;
+}
+#aaa
+{
+	font-size:12px;
+}
+</style>
+</head>
+
+<body>
+<div id ="all" >
+
+  <p>
+    <input type="image" name="imageField" id="imageField" src="picture/科协logo.jpg" />
+    
+    <script>
+	function change1()
+	{
+		document.getElementById("fra").src='申报人信息frame/基本信息.html'
+	}
+    function change2()
+    {
+		document.getElementById("fra").src='申报人信息frame/奖励和荣誉称号.html'
+    }
+	function change3()
+	{
+		document.getElementById("fra").src='申报人信息frame/发表论文和专著情况.html'
+	}
+	function change4()
+	{
+		document.getElementById("fra").src='申报人信息frame/发表论文和专著情况.html'
+	}
+
+    </script>
+    
+  </p>
+  <p>&nbsp;</p>
+  <p><div id="subtitle">申报人信息</div></p>
+</div>
+<table width="1250" height="764" border="1">
+  <tr>
+    <td width="341" height="760">
+    <div id="navi"><p>
+         <a target="iframe" class="button button-block button-rounded button-primary button-large" onclick="change1()">基本信息</a>
+        </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>
+        <a target="iframe" class="button button-block button-rounded button-primary button-large" onclick="change2()">所获科技奖励和荣誉</a></p>
+      <p>&nbsp;</p>
+      <p>&nbsp; </p>
+      <p><a target="iframe" class="button button-block button-rounded button-primary button-large" onclick="change3()">发表论文和专著情况</a>      </p>
+       
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>
+        
+        <a target="iframe" class="button button-block button-rounded button-primary button-large" onclick="change4()">获基金资助情况</a>
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>   
+        <a href="http://www.bootcss.com/" class="button button-block button-rounded button-primary button-large">参与重大工程技术项目情况</a>
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>
+      <a href="http://www.bootcss.com/" class="button button-block button-rounded button-primary button-large" >其他情况</a>
+      </p>
+     </div>
+   
+    </td>
+    <td width="899">
+    <iframe id="fra" height="100%" width="100%" src="申报人信息frame/基本信息.html">
+    </iframe>
+    
+    </td>
+  </tr>
+</table>
+<table width="1250"  border="0">
+  <tr>
+    <td><a class="button button-block button-rounded button-primary button-large">完成全部表格，点击确认提交</a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+<footer>
+&copy; Copyright 2015. woshibala All rights reserved.
+</footer>
+</html>

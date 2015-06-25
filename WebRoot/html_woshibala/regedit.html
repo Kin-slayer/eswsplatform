@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" bgcolor="#FFF">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>申请人注册</title>
+<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script language="JavaScript" src="test.js">
+			
+		</script>
+		<style type="text/css">
+footer {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #999;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+body {
+	position: relative;
+	color: #000;
+	background: #FFF;
+	text-align: center;
+}
+
+#title1 {
+	position: relative;
+	font-size: 50px;
+	font-style: normal;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light",
+		"Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+	text-align: center;
+	color: #FFF;
+	margin-top: 30px;
+}
+
+#title2 {
+	font-size: 36px;
+	color: #FFF;
+	padding-left: 10px;
+	text-align: center;
+}
+
+table {
+	margin: auto;
+}
+
+#login {
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+	font-family: "Arial Unicode MS", "Microsoft JhengHei Light",
+		"Microsoft JhengHei UI Light", "Microsoft YaHei UI Light";
+}
+
+#sub {
+	text-align: center;
+}
+
+#form1 {
+	text-align: center;
+	padding-top: 3px;
+}
+
+#loginwindow {
+	padding-top: 10px;
+}
+
+#password {
+	top: 10px;
+	clip: rect(10px, auto, auto, auto);
+	text-align: center;
+}
+
+.input-group {
+	text-align: center;
+}
+
+#all {
+	margin: auto;
+	text-align: center;
+}
+
+#name {
+	display: none;
+	color: #C03;
+}
+
+#sex {
+	display: none;
+	color: #C03;
+}
+
+#birthday {
+	display: none;
+	color: #C03;
+}
+
+#unitname {
+	display: none;
+	color: #C03;
+}
+
+#div1 {
+	display: none;
+	color: #C03;
+}
+
+#password {
+	display: none;
+	color: #C03;
+}
+</style>
+		<script language="JavaScript" type="text/JavaScript">
+		<!--
+			function checkusername() {
+				if (document.getElementById) {
+					target = document.getElementById('div1');
+					var aaa = document.form1.username.value;
+					//alert(aaa);
+					if (/[\u4e00-\u9fa5]/.test(aaa) || aaa.length > 16
+							|| aaa == "")//判断如果输入用户名是否汉字
+					{
+						target.style.display = "block"; //block 显示
+						return false;
+					} else {
+						target.style.display = "none";//若不是汉字显示提示内容
+						return true;
+					}
+				}
+			}
+			function checkname() {
+				target = document.getElementById('name');
+				var aaa = document.form1.name.value;
+				//alert(aaa);
+				aaa = aaa.replace(/(^\s+)|(\s+$)/g, "");
+				if (/^[\u4e00-\u9fa5]{2,6}$/.test(aaa)) {
+					target.style.display = "none";
+					return true;
+				} else {
+					target.style.display = "block"; //block 显示
+					return false;
+				}
+			}
+			function checksex()//提交时触发
+			{
+				target = document.getElementById('sex');
+				var radio0 = document.getElementById('male');
+				var radio1 = document.getElementById('female');
+				if (radio0.checked || radio1.checked) {
+					target.style.display = "none";
+					return true;
+				} else {
+					target.style.display =	 "block";
+					return false;
+				}
+			}
+			function checkbirthday()//提交时触发
+			{
+				target = document.getElementById('birthday');
+				var aaa = document.form1.birthDay.value;
+				if (aaa == "") {
+					target.style.display = "block";
+					return false;
+				} else {
+					target.style.display = "none";
+					return true;
+				}
+
+			}
+			function checkpassword() {
+				if (document.getElementById) {
+					target = document.getElementById('password');
+					var aaa = document.form1.password.value;
+					//alert(aaa);
+					if (/^([a-zA-Z0-9]|[._]){6,16}$/.test(aaa)) {
+						target.style.display = "none";//若不是汉字显示提示内容
+						return true;
+					} else {
+						target.style.display = "block";
+						return false;
+
+					}
+
+				}
+			}
+			function checkunitname() {
+				target = document.getElementById('unitname');
+				var aaa = document.form1.unitName.value;
+				//alert();
+				if (aaa == "") {
+					target.style.display = "block";
+					return false;
+				} else {
+					target.style.display = "none";
+					return true;
+				}
+
+			}
+			function checkall() {
+				checkunitname();
+				checkusername();
+				checkname();
+				checkpassword();
+				checksex();
+				checkbirthday();
+				if (checkunitname() && checkusername && checkname()
+						&& checkpassword() && checksex() && checkbirthday()) {
+					document.getElementById("form1").submit(); 
+					alert(11);
+				}
+			}
+
+			-->
+		</script>
+</head>
+
+<body>
+	<div id="all">
+
+		<input type="image" name="imageField" id="imageField"
+			src="picture/科协logo.jpg" />
+		<table width="1250" height="493" border="1">
+			<tr>
+				<td height="98">
+					<div id="login">申报者注册</div>
+				</td>
+
+			</tr>
+			<tr>
+				<td width="17%" height="267" valign="top"><div>
+						<form id="form1" name="form1" method="post" action="DeclarerApply">
+							<p>
+								<input type="text" name="username" id="username"
+									placeholder="请输入用户名" class="button-rounded"
+									onblur="checkusername()" /> </br>
+								<div id="div1">请输入16个以内数字、字母或符号</div>
+							</p>
+							<p>&nbsp;</p>
+							<input name="name" type="text" placeholder="申报者姓名"
+								class="button-rounded" onblur="checkname()"></br>
+								<div id="name">请输入2~6个汉字</div>
+								</br> 性别 &nbsp; <input type="radio" name="sex" value="1" id="male" />男</label>
+								&nbsp; <input type="radio" name="sex" value="2" id="female" />女</label></br>
+								<div id="sex">请选择性别</div>
+								</br> 出生日期</br> <input type="date" name="birthDay" /><br />
+								<div id="birthday">请选择出生日期</div>
+								<br /> <input name="unitName" type="text" placeholder="工作单位全称"
+								class="button-rounded" onblur="checkunitname()"><br />
+									<div id="unitname">请填写工作单位</div>
+									<br />
+									<p>
+										<input type="text" name="password" placeholder="请输入密码"
+											class="button-rounded" onblur="checkpassword()" /><br />
+										<div id="password">请输入6-16个数字、字母或符号</div>
+										<p>&nbsp;</p>
+										<input name="submit" value="注 册"
+											class="button button-glow button-border button-rounded button-primary"
+											onclick="checkall()" />
+									</p>
+						</form>
+					</div>
+			</tr>
+			<tr>
+				<td height="120" align="left">
+					<p>
+						<button name="signup" id="signup" value="已有账号，点击登陆"
+							class="button button-glow button-border button-rounded button-primary">已有账号，点击登陆</button>
+					</p>
+					<p>&nbsp;</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+<footer> &copy; Copyright 2015. woshibala All rights reserved.
+</footer>
+</html>
