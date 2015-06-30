@@ -32,11 +32,33 @@ textarea{
 	width:100%;
 }
 </style>
+<script language="javascript"> 
+var counter = 1;
+function addRow()
+{
+counter++;//计数器	
+//添加一行
+var newTr = aaa.insertRow();
+//添加两列
+var newTd0 = newTr.insertCell();
+newTd0.height="50";
+var newTd1 = newTr.insertCell();
+var newTd2 = newTr.insertCell();
+var newTd3 = newTr.insertCell();
+var newTd4 = newTr.insertCell();
+//设置列内容和属性
+newTd0.innerHTML = '<input type=text id="box0">';
+newTd1.innerHTML = '<input type=text id="box1">';
+newTd2.innerHTML = '<input type=text id="box2">';
+newTd3.innerHTML = '<input type=text id="box3">';
+newTd4.innerHTML = '<input type=text id="box4">';
+}
+</script> 
 </head>
 
 <body>
 <div id="all">
-<table  width="98%" height="597" border="1" bgcolor="#AED7FF">
+<table id="aaa" width="98%"  border="1" bgcolor="#AED7FF">
   <tr>
     <td colspan="5"><div id="title1"><p><h2>所获科技奖励和荣誉称号情况 </h2></p></div></td>
   </tr>
@@ -48,17 +70,19 @@ textarea{
     <td width="23%"><p >本人排名</p></td>
   </tr>
   <tr>
-    <td height="28"></td>
-    <td height="28"></td>
-    <td height="28"></td>
-    <td height="28"></td>
-    <td height="28"></td>
+    <td height="50"><input type="text" ></td>
+    <td height="50"><input type="text" ></td>
+    <td height="50"><input type="text" ></td>
+    <td height="50"><input type="text" ></td>
+    <td height="50"><input type="text" ></td>
   </tr>
+  </table>
+<table width="98%" border="1">
   <tr>
-    <td height="413" colspan="5"></td>
+    <td height="50" colspan="5"><a class="button button-block button-rounded button-highlight button-large" onClick="addRow()">添加+</a></td>
   </tr>
 </table>
-<table width="98%" border="0">
+<table width="98%" border="1">
   <tr>
     <td><a class="button button-block button-rounded button-primary button-large" >确认提交</a></td>
   </tr>

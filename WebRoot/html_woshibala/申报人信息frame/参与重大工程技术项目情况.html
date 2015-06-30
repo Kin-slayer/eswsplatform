@@ -1,51 +1,74 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link rel="stylesheet" type="text/css" href="../css/button.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>参与重大工程技术项目情况</title>
+<script language="javascript"> 
+var counter = 1;
+function addRow()
+{
+counter++;//计数器 
+//添加一行
+var newTr = aaa.insertRow();
+
+//添加列
+var newTd0 = newTr.insertCell();
+newTd0.height="50";
+var newTd1 = newTr.insertCell();
+var newTd2 = newTr.insertCell();
+var newTd3 = newTr.insertCell();
+
+//设置列内容和属性
+newTd0.innerHTML = '<div align="center" ><input type=text id="box0"></div>';
+newTd1.innerHTML = '<div align="center" ><input type=text id="box1"></div>';
+newTd2.innerHTML = '<div align="center" ><input type=text id="box2"></div>';
+newTd3.innerHTML = '<div align="center" ><input type=text id="box3"></div>';
+}
+</script> 
 </head>
 
 
 <body>
-<table width="98%" height="557" border="0" bgcolor="#AED7FF">
+<table id="aaa" width="98%"  border="1" bgcolor="#AED7FF">
   <tr>
-    <td height="40" colspan="4"><p align="center" >参与重大工程技术项目情况</p></td>
+    <td height="40" colspan="4"><div align="center" ><h3>参与重大工程技术项目情况</h3></div></td>
   </tr>
   <tr>
-    <td width="23%" height="33"><p align="center" >项目名称</p>
-     
-    </td>
+    <td width="23%" height="33"><p align="center" >项目名称</p></td>
     <td width="23%"><p align="center" >项目委托单位</p></td>
     <td width="25%"><p align="center" >本人参与情况</p></td>
     <td width="29%"><p align="center" >经济效益（万元）</p></td>
   </tr>
   <tr>
   <form>
-    <td height="56"><label for="department"></label>
+    <td height="50"><label for="department"></label>
       <div align="center" >
         <input name="name" type="text" id="name" value="" />
       </div></td>
-    <td height="56"><label for="department"></label>
+    <td height="50"><label for="department"></label>
       <div align="center">
         <input type="text" name="department" id="department" />
       </div></td>
-    <td height="56"><label for="involvement"></label>
+    <td height="50"><label for="involvement"></label>
       <div align="center">
         <input type="text" name="involvement" id="involvement" />
       </div></td>
-    <td height="56"><label for="profile"></label>
+    <td height="50"><label for="profile"></label>
       <div align="center">
         <input type="text" name="profile" id="profile" />
       </div></td>
   </form>
   </tr>
+  </table>
+  <table width="98%" border="1">
   <tr>
-    <td height="364" colspan="4">&nbsp;</td>
+    <td height="50" colspan="5"><a class="button button-block button-rounded button-highlight button-large" onClick="addRow()">添加+</a></td>
   </tr>
+</table>
+  <table width="98%" border="1">
   <tr>
-    <td colspan="4">
+    <td colspan="5">
       <div align="center"><a target="iframe" onclick="change4()" class="button button-block button-rounded button-primary button-large">确  认  提  交</a></div>
     </td>
   </tr>
