@@ -67,35 +67,15 @@ color:#C03;
 display:none;
 color:#C03;
 }
-#subject{
-display:none;
-color:#C03;
-}
 #birthplace{
 display:none;
 color:#C03;
+}#birthplace{
+display:none;
+color:#C03;
 }
-.td
-{
-	text-align: center;
-}
-
 </style>
 <script language="JavaScript" type="text/JavaScript">
-var counter = 1;
-function addRow()
-{
-counter++;//计数器	
-//添加一行
-var newTr = add.insertRow();
-//添加两列
-var newTd0 = newTr.insertCell();
-var newTd1 = newTr.insertCell();
-
-//设置列内容和属性
-newTd0.innerHTML = '<input type="date" name=""/>——<input type="date" name=""/>';
-newTd1.innerHTML = '<input type="text" id="box1">';
-}
 function checkidnumber()
 {
   target=document.getElementById('idnumber');
@@ -209,7 +189,7 @@ function checkdegree()//提交时触发,检查是否为空
       return false;
   }
 }
-function checksubject()
+function
 {
 
 }
@@ -223,42 +203,31 @@ function checkall()
 
 <body>
 <div id="all">
+<table width="98%" height="526" border="0" bgcolor="#AED7FF">
+  <tr>
+    <td width="40%" rowspan="2" align="right">
+  <form  name="form1" class="form-horizontal" >
+   
+      <div id="legend" class="">
+        <legend class="legend1">基本信息</legend>
+        <p>&nbsp;</p>
+      </div>
+          <!-- Text input-->
+          身份证
+          <input  name="idNum" type="text" placeholder="请输入18位身份证号" class="input-xlarge" onblur="checkidnumber()"><br />
+          <div id="idnumber">请输入18位数字</div><br />
 
-</div>
-<table width="100%" border="1" bgcolor="#AED7FF">
-  <tr>
-    <td colspan="2"><div align="center"><h3>基本信息</h3></div></td>
-    <td colspan="2" rowspan="7"><p>本人照片</p>
-    <p><input class="input-file" id="fileInput" type="file"></p></td>
-  </tr>
-  <tr>
-    <td width="27%">姓名</td>
-    <td width="26%"> <input name="name" type="text" placeholder="申报者姓名" class="input-xlarge" onblur="checkname()"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td> <div id="name">请输入2~6个汉字</div></td>
-  </tr>
-  <tr>
-    <td>身份证</td>
-    <td> <input  name="idNum" type="text" placeholder="请输入18位身份证号" class="input-xlarge" onblur="checkidnumber()"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td> <div id="idnumber">请输入18位数字</div></td>
-  </tr>
-  <tr>
-    <td> 性别  </td>
-    <td><input type="radio" name="sex" value="1" id="male" />男</label>&nbsp;&nbsp;
-          <input type="radio" name="sex" value="2" id="female" />女</label></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="sex">请选择性别</div></td>
-  </tr>
-  <tr>
-    <td>民族</td>
-    <td><select name="nation">
+          姓名
+          <input name="name" type="text" placeholder="申报者姓名" class="input-xlarge" onblur="checkname()"></br>
+          <div id="name">请输入2~6个汉字</div></br>
+
+          性别       
+          <input type="radio" name="sex" value="1" id="male" />男</label>
+          <input type="radio" name="sex" value="2" id="female" />女</label></br>
+          <div id="sex">请选择性别</div></br>
+          
+          民族
+          <select name="nation">
              <option selected="selected" value="0">-请选择-</option>
              <option value="汉族">汉族</option> 
              <option value="蒙古族">蒙古族</option>
@@ -317,19 +286,11 @@ function checkall()
              <option value="门巴族">门巴族</option>
              <option value="珞巴族">珞巴族</option>
              <option value="基诺族">基诺族</option>
-          </select></td>
-    <td width="20%">专业技术职务</td>
-    <td width="27%"> <input name="proJob" type="text" placeholder="" class="input-xlarge"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="nation">请选择民族</div></td>
-    <td>&nbsp;</td>
-    <td><div id="proJob">请输入技术职务</div></td>
-  </tr>
-  <tr>
-    <td>学位</td>
-    <td><select name="eduBg">
+          </select><br />
+          <div id="nation">请选择民族</div><br />
+                            
+          学历
+          <select name="eduBg">
              <option selected="selected" value="0">-请选择-</option>
              <option value="小学">小学</option>
              <option value="初中">初中</option>
@@ -338,57 +299,28 @@ function checkall()
              <option value="本科">本科</option>
              <option value="硕士研究生">硕士研究生</option>
              <option value="博士研究生">博士研究生</option>
-          </select></td>
-    <td>行政职务</td>
-    <td><input name="exeJob" type="text" placeholder="" class="input-xlarge"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="eduBg">请选择学历</div></td>
-    <td>&nbsp;</td>
-    <td><div id="exeJob">请输入行政职务</div></td>
-  </tr>
-  <tr>
-    <td>学位</td>
-    <td><input type="radio" name="degree" value="1" id="bs" />学士</label>
+          </select>
+          <div id="eduBg">请选择学历</div><br/>
+           
+          
+          学位
+          <input type="radio" name="degree" value="1" id="bs" />学士</label>
           <input type="radio" name="degree" value="2" id="master"/>硕士</label>
-          <input type="radio" name="degree" value="2" id="doctor" />博士</label></td>
-    <td>手机号码</td>
-    <td><input name="telPerNum" type="text" placeholder="" class="input-xlarge"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="degree">请选择学位</div></td>
-    <td>&nbsp;</td>
-    <td><div id="telPerNum">请输入11位手机号</div></td>
-  </tr>
-  <tr>
-    <td>党派</td>
-    <td><input name="party" type="text" placeholder="" class="input-xlarge"></td>
-    <td>单位电话</td>
-    <td><input name="telWorkNum" type="text" placeholder="" class="input-xlarge"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="party">请填写党派</div></td>
-    <td>&nbsp;</td>
-    <td><div id="telWorkNum">请输入单位电话</div></td>
-  </tr>
-  <tr>
-    <td>出生日期</td>
-    <td> <input type="date" name="birthDay" /></td>
-    <td>E-mail</td>
-    <td> <input name="EMail" type="text" placeholder="" class="input-xlarge"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="birthday">请选择出生日期</div></td>
-    <td>&nbsp;</td>
-    <td><div id="email">请输入正确的Email地址</div></td>
-  </tr>
-  <tr>
-    <td>出生地</td>
-    <td><select name="birthPlace">
+          <input type="radio" name="degree" value="2" id="doctor" />博士</label>
+          </br>
+          <div id="degree">请选择学位</div><br/>
+          
+          党派
+          <input name="party" type="text" placeholder="" class="input-xlarge">
+          </br>
+          <div id="party">请填写党派</div><br />
+           
+          出生日期
+          <input type="date" name="birthDay" /><br />
+          <div id="birthday">请选择出生日期</div><br />
+          
+          出生地
+          <select name="birthPlace">
           <option selected="selected" value="0">请选择省份</option>
           <option value ="北京市">北京市 </option>
           <option value ="天津市">天津市 </option>
@@ -424,98 +356,160 @@ function checkall()
           <option value ="新疆维吾尔自治区">新疆维吾尔自治区</option>
           <option value ="香港特别行政区">香港特别行政区</option>
           <option value ="澳门特别行政区">澳门特别行政区</option>
-          </select></td>
-    <td>住宅电话</td>
-    <td><input name="telHome"type="text" placeholder="" class="input-xlarge" /></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="birthplace">请选择出生地</div></td>
-    <td>&nbsp;</td>
-    <td><div id="telHome">请输入住宅电话</div></td>
-  </tr>
-  <tr>
-    <td>学科类别</td>
-    <td><input name="subject" type="text" placeholder="" class="input-xlarge" /></td>
-    <td>工作单位全称</td>
-    <td> <input  name="unitName" type="text" placeholder="" class="input-xlarge"></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="subject">请输入学科类别</div></td>
-    <td>&nbsp;</td>
-    <td><div id="unitName">请输入单位全称</div></td>
-  </tr>
-  <tr>
-    <td>工作地址及邮编</td>
-    <td> <input name="addrWork" type="text" placeholder="工作地址" class="input-xlarge" /></td>
-    <td>家庭地址及邮编</td>
-    <td><input name="addrWork" type="text" placeholder="家庭地址" class="input-xlarge" /></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="addrWork">请输入工作地址</td>
-    <td>&nbsp;</td>
-    <td><div id="addrWork">请输入家庭地址</div></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td> <input name="" type="text" placeholder="工作邮编" class="input-xlarge" /></td>
-    <td>&nbsp;</td>
-    <td><input name="" type="text" placeholder="家庭邮编" class="input-xlarge" /></td>
-  </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td><div id="postcodeWork">请输入工作邮编</div></td>
-    <td>&nbsp;</td>
-    <td><div id="HomePostcode">请输入家庭邮编</div></td>
-  </tr>
-</table>
-<table width="100%" border="1" bgcolor="#AED7FF">
-  <tr>
-    <td><h4>社会职务</h4></td>
-  </tr>
-  <tr>
-    <td> <textarea name="" rows="10" cols="120" class="" type=""  > </textarea></td>
-  </tr>
-</table>
-<table width="100%" border="1" bgcolor="#AED7FF">
-  <tr>
-    <td><h4>国内外学术组织任职情况</h4></td>
-  </tr>
-  <tr>
-    <td><textarea name="textarea" rows="10" cols="120" class="" type=""  > </textarea></td>
-  </tr>
-</table>
-<table id="add" width="100%" border="1" bgcolor="#AED7FF">
-  <tr>
-    <td colspan="2"><h4>本人简历（从高校填起）</h4></td>
-  </tr>
-  <tr>
-    <td width="48%">起止年月</td>
-     <td width="52%">在何单位（学校）任何职（读何专业）</td>
-  </tr>
-   <tr>
-    <td width="48%"><input type="date" name=""/>——<input type="date" name=""/></td>
-     <td width="52%"><input type="text" name=""/></td>
-  </tr>
-  <tr>
+          </select></br>
+          <div id="birthplace">请选择出生地</div>
+          </br>  
+                   
+          学科类别
+          <input name="subject" type="text" placeholder="" class="input-xlarge" />
+          <br />
+           
+          <span class="control-label">工作地址及邮编</span>
+          <input name="addrWork" type="text" placeholder="" class="input-xlarge" />
+           </p>
+           <p>
+             <input name="" type="text" placeholder="工作邮编" class="input-xlarge" />
+           </p>
+    </td>
+    <td width="60%" height="179" align="center">
+    
+  
+      <div id="photo">
+       照片上传
+       <p>&nbsp;</p>
+      </div>
    
+          <p>
+            <label class="control-label">本人照片</label>
+            
+            <!-- File Upload -->
+            
+            <input class="input-file" id="fileInput" type="file">
+          </p>
+          <p>
+            
+            
+            
+            <label class="control-label"></label>
+            
+            <!-- Button -->
+            
+          </p>
+          <button class="btn btn-info">提交照片</button>
+       
+    
+  </form>
+  </td>
   </tr>
-</table>
-<table width="50%" border="1">
   <tr>
-    <td colspan="2"><a class="button button-block button-rounded button-highlight button-large" onClick="addRow()">添加简历+</a></td>
+    <td height="341">
+    <div id="rightsheet">
+    
+   
+          <p>
+            <label class="control-label" for="input01">专业技术职务</label>
+            <input name="proJob" type="text" placeholder="" class="input-xlarge">
+          </p>
+          <p>
+            <label class="control-label" for="input01">行政职务</label>
+            <input name="exeJob" type="text" placeholder="" class="input-xlarge">
+            
+            
+            <label class="control-label" for="input01"><br />
+              <br />
+            手机号码</label>
+            <input name="telPerNum" type="text" placeholder="" class="input-xlarge">
+          </p>
+          <p>
+            <label class="control-label" for="input01">单位电话  </label>
+            <input name="telWorkNum" type="text" placeholder="" class="input-xlarge">
+          </p>
+          <p>
+            
+            <!-- Text input-->
+            <label class="control-label" for="input01">E-mail  </label>
+            <input name="EMail" type="text" placeholder="" class="input-xlarge"><br />
+            <div id="email">请输入正确的Email地址</div>
+            
+            <label class="control-label" for="input01"><br />
+              <br />
+            住宅电话
+            <input type="text" placeholder="单位地址" class="input-xlarge" />
+            <br />
+            <br />
+ </label>
+          
+            
+            <!-- Text input-->
+            <label class="control-label" for="input01"><br />
+            <br />
+            工作单位全称
+            <input  name="unitName" type="text" placeholder="" class="input-xlarge">
+            <>
+          <p>
+            <label class="control-label" for="input5">家庭地址及邮编</label>
+            <input name="addrWork" type="text" placeholder="家庭地址" class="input-xlarge" />
+          </p>
+          <p>
+            <input name="" type="text" placeholder="家庭邮编" class="input-xlarge" />
+          </p>
+          <p>&nbsp; </p>
+           
+   
+    </div>
+  </td>
   </tr>
 </table>
-<table width="100%" border="1">
+</div>
+<table width="98%" height="584" border="0" bgcolor="#AED7FF">
   <tr>
-    <td><a class="button button-block button-rounded button-primary button-large" >确认提交</a></td>
+    <td height="173">
+  
+    
+     
+        <legend class="">社会职务</legend>
+    
+
+          <!-- Textarea -->
+          <label class="control-label"></label>
+         
+            <div class="textarea">
+                  <textarea name="" rows="10" cols="120" class="" type=""  > </textarea>
+        </div>
+         
+ 
+</td>
+  </tr>
+  <tr>
+    <td height="185">
+    
+     
+        <legend class="">国内外学术组织任职情况</legend>
+    
+
+          <!-- Textarea -->
+          <label class="control-label"></label>
+         
+            <div class="textarea">
+                  <textarea rows="15"  cols="120" class="" type=""  > </textarea>
+        </div>
+         
+  </form></td>
+  </tr>
+  <tr>
+    <td height="145"><form class="form-horizontal">
+      <p >本人简历（从高校填起）</p>
+      <legend class=""></legend>
+      <!-- Textarea -->
+      <label class="control-label"></label>
+      <div class="textarea">
+        <textarea name="textarea" rows="15" cols="120" class="" type=""  > </textarea>
+      </div>
+    </form></td>
+  </tr>
+  <tr>
+    <td height="37">  <a target="iframe" class="button button-block button-rounded button-primary button-large">确  认  提  交</a></td>
   </tr>
 </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 </body>
 </html>
