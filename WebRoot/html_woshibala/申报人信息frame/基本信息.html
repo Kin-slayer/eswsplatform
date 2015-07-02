@@ -59,7 +59,7 @@ color:#C03;
 display:none;
 color:#C03;
 }
-#birthplace{
+#birthPlace{
 display:none;
 color:#C03;
 }
@@ -71,7 +71,47 @@ color:#C03;
 display:none;
 color:#C03;
 }
-#birthplace{
+#addrWork{
+display:none;
+color:#C03;
+}
+#addrHome{
+display:none;
+color:#C03;
+}
+#postcodeHome{
+display:none;
+color:#C03;
+}
+#postcodeWork{
+display:none;
+color:#C03;
+}
+#proJob{
+display:none;
+color:#C03;
+}
+#exeJob{
+display:none;
+color:#C03;
+}
+#telWorkNum{
+display:none;
+color:#C03;
+}
+#telPerNum{
+display:none;
+color:#C03;
+}
+#telHome{
+display:none;
+color:#C03;
+}
+#email{
+display:none;
+color:#C03;
+}
+#unitName{
 display:none;
 color:#C03;
 }
@@ -148,22 +188,6 @@ function checksex()//提交时触发
 }
 function checknation()//提交时触发，下拉框，检查是否为空
 {
-    target = document.getElementById('birthday');
-    var aaa=document.form1.birthDay.value;
-    if(aaa=="")
-  {
-     target.style.display="block";
-     return false;
-  }
-  else
-  {
-    target.style.display="none";
-    return true;
-  }
-
-}
-function checkbirthday()//提交时触发，检查是否为"0"
-{
     target = document.getElementById('nation');
     var aaa=document.form1.nation.value;
     if(aaa=="0")
@@ -178,9 +202,43 @@ function checkbirthday()//提交时触发，检查是否为"0"
   }
 
 }
-function checkeubg()//提交时触发，检查是否为"0"
+function checkbirthPlace()//提交时触发，下拉框，检查是否为空
+{
+    target = document.getElementById('birthPlace');
+    var aaa=document.form1.birthPlace.value;
+    if(aaa=="0")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+
+}
+
+function checkbirthday()//提交时触发，检查是否为"0"
+{
+    target = document.getElementById('birthday');
+    var aaa=document.form1.birthDay.value;
+    if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+
+}
+function checkedubg()//提交时触发，检查是否为"0"
 {
   target = document.getElementById('eduBg');
+   var aaa=document.form1.eduBg.value;
    if(aaa=="0")
   {
      target.style.display="block";
@@ -209,15 +267,255 @@ function checkdegree()//提交时触发,检查是否为空
       return false;
   }
 }
-function checksubject()
+function checkparty()//检查党派不为空
 {
-
+   target = document.getElementById('party');
+    var aaa=document.form1.party.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
 }
-function checkall()
+function checksubject()//检查学科类别不为空
 {
-
-
+  target = document.getElementById('subject');
+   var aaa=document.form1.subject.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
 }
+function checkaddrWork()
+{
+   target = document.getElementById('addrWork');
+   var aaa=document.form1.addrWork.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkaddrHome()
+{
+    target = document.getElementById('addrHome');
+	 var aaa=document.form1.addrHome.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkpostcodeHome()
+{
+   target = document.getElementById('postcodeHome');
+    var aaa=document.form1.postcodeHome.value;
+   if(!/[1-9]\d{5}(?!\d)/.test(aaa))
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkpostcodeWork()
+{
+ target = document.getElementById('postcodeWork');
+    var aaa=document.form1.postcodeWork.value;
+   if(!/[1-9]\d{5}(?!\d)/.test(aaa))
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkproJob()
+{
+  target = document.getElementById('proJob');
+	 var aaa=document.form1.proJob.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkexeJob()
+{
+  target = document.getElementById('exeJob');
+	 var aaa=document.form1.exeJob.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checktelPerNum()
+{
+  target = document.getElementById('telPerNum');
+   var aaa=document.form1.telPerNum.value;
+   if(!/^1[3|4|5|8][0-9]\d{4,8}$/.test(aaa))
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checktelWorkNum()
+{
+  target = document.getElementById('telWorkNum');
+  var aaa=document.form1.telWorkNum.value;
+   if(!/^[1-9]\d{10}$/.test(aaa))
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checktelHome()
+{
+  target = document.getElementById('telHome');
+   var aaa=document.form1.telHome.value;
+   if(!/^[1-9]\d{10}$/.test(aaa))
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkemail()
+{
+   target = document.getElementById('email');
+   var aaa=document.form1.EMail.value;
+  if(!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/.test(aaa))
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkunitName()
+{
+  
+  target = document.getElementById('unitName');
+	 var aaa=document.form1.unitName.value;
+   if(aaa=="")
+  {
+     target.style.display="block";
+     return false;
+  }
+  else
+  {
+    target.style.display="none";
+    return true;
+  }
+}
+function checkall() {
+				checkname();
+				checksex();
+				checkidnumber();
+				checkunitName();
+				checkemail();
+				checktelHome();
+				checktelWorkNum();
+				checktelPerNum();
+				checkexeJob();
+				checkproJob();
+				checkpostcodeWork();
+				checkpostcodeHome();
+				checkaddrHome();
+				checkaddrWork();
+				checksubject();
+				checkparty();
+				checkdegree();
+				checkedubg();
+				checknation();
+				checkbirthPlace();
+			    checkbirthday();		
+				if (
+				checkname() &&
+				checkidnumber()&&
+				checksex()&&
+				checkbirthday()&&
+				checkunitName()&&
+				checkemail()&&
+				checktelHome()&&
+				checktelWorkNum()&&
+				checktelPerNum()&&
+				checkexeJob()&&
+				checkproJob()&&
+				checkpostcodeWork()&&
+				checkpostcodeHome()&&
+				checkaddrHome()&&
+				checkaddrWork()&&
+				checksubject()&&
+				checkparty()&&
+				checkdegree()&&
+				checkedubg()&&
+				checkbirthPlace()&&
+				checkbirthday()&&
+				checknation()) 
+				{
+					alert(11);
+					//form1.submit();
+					return true;
+				} else {
+					return false;
+				}
+			}
 </script>
 </head>
 
@@ -225,6 +523,7 @@ function checkall()
 <div id="all">
 
 </div>
+<form id="form1" name="form1" action="" method="post" >
 <table width="100%" border="1" bgcolor="#AED7FF">
   <tr>
     <td colspan="2"><div align="center"><h3>基本信息</h3></div></td>
@@ -319,7 +618,7 @@ function checkall()
              <option value="基诺族">基诺族</option>
           </select></td>
     <td width="20%">专业技术职务</td>
-    <td width="27%"> <input name="proJob" type="text" placeholder="" class="input-xlarge"></td>
+    <td width="27%"> <input name="proJob" type="text" placeholder="" class="input-xlarge" onblur="checkproJob()" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -340,7 +639,7 @@ function checkall()
              <option value="博士研究生">博士研究生</option>
           </select></td>
     <td>行政职务</td>
-    <td><input name="exeJob" type="text" placeholder="" class="input-xlarge"></td>
+    <td><input name="exeJob" type="text" placeholder="" class="input-xlarge" onblur="checkexeJob()"></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -354,7 +653,7 @@ function checkall()
           <input type="radio" name="degree" value="2" id="master"/>硕士</label>
           <input type="radio" name="degree" value="2" id="doctor" />博士</label></td>
     <td>手机号码</td>
-    <td><input name="telPerNum" type="text" placeholder="" class="input-xlarge"></td>
+    <td><input name="telPerNum" type="text" placeholder="" class="input-xlarge" onblur="checktelPerNum()"></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -364,21 +663,21 @@ function checkall()
   </tr>
   <tr>
     <td>党派</td>
-    <td><input name="party" type="text" placeholder="" class="input-xlarge"></td>
+    <td><input name="party" type="text" placeholder="" class="input-xlarge" onblur="checkparty()"></td>
     <td>单位电话</td>
-    <td><input name="telWorkNum" type="text" placeholder="" class="input-xlarge"></td>
+    <td><input name="telWorkNum" type="text" placeholder="" class="input-xlarge" onblur="checktelWorkNum()" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td><div id="party">请填写党派</div></td>
     <td>&nbsp;</td>
-    <td><div id="telWorkNum">请输入单位电话</div></td>
+    <td><div id="telWorkNum">请输入11单位电话（包括区号）</div></td>
   </tr>
   <tr>
     <td>出生日期</td>
     <td> <input type="date" name="birthDay" /></td>
     <td>E-mail</td>
-    <td> <input name="EMail" type="text" placeholder="" class="input-xlarge"></td>
+    <td> <input name="EMail" type="text" placeholder="" class="input-xlarge" onblur="checkemail()" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -426,19 +725,19 @@ function checkall()
           <option value ="澳门特别行政区">澳门特别行政区</option>
           </select></td>
     <td>住宅电话</td>
-    <td><input name="telHome"type="text" placeholder="" class="input-xlarge" /></td>
+    <td><input name="telHome"type="text" placeholder="" class="input-xlarge" onblur="checktelHome()" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div id="birthplace">请选择出生地</div></td>
+    <td><div id="birthPlace">请选择出生地</div></td>
     <td>&nbsp;</td>
-    <td><div id="telHome">请输入住宅电话</div></td>
+    <td><div id="telHome">请输11位入住宅电话（包括区号）</div></td>
   </tr>
   <tr>
     <td>学科类别</td>
-    <td><input name="subject" type="text" placeholder="" class="input-xlarge" /></td>
+    <td><input name="subject" type="text" placeholder="" class="input-xlarge" onblur="checksubject()"/></td>
     <td>工作单位全称</td>
-    <td> <input  name="unitName" type="text" placeholder="" class="input-xlarge"></td>
+    <td> <input  name="unitName" type="text" placeholder="" class="input-xlarge" onblur="checkunitName()"></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -448,27 +747,27 @@ function checkall()
   </tr>
   <tr>
     <td>工作地址及邮编</td>
-    <td> <input name="addrWork" type="text" placeholder="工作地址" class="input-xlarge" /></td>
+    <td> <input name="addrWork" type="text" placeholder="工作地址" class="input-xlarge" onblur="checkaddrWork()"/></td>
     <td>家庭地址及邮编</td>
-    <td><input name="addrWork" type="text" placeholder="家庭地址" class="input-xlarge" /></td>
+    <td><input name="addrHome" type="text" placeholder="家庭地址" class="input-xlarge" onblur="checkaddrHome()"/></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td><div id="addrWork">请输入工作地址</td>
+    <td><div id="addrWork">请输入工作地址</div></td>
     <td>&nbsp;</td>
-    <td><div id="addrWork">请输入家庭地址</div></td>
+    <td><div id="addrHome">请输入家庭地址</div></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td> <input name="" type="text" placeholder="工作邮编" class="input-xlarge" /></td>
+    <td> <input name="postcodeWork" type="text" placeholder="工作邮编" class="input-xlarge" onblur="checkpostcodeWork()"/></td>
     <td>&nbsp;</td>
-    <td><input name="" type="text" placeholder="家庭邮编" class="input-xlarge" /></td>
+    <td><input name="postcodeHome" type="text" placeholder="家庭邮编" class="input-xlarge" onblur="checkpostcodeHome()" /></td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td><div id="postcodeWork">请输入工作邮编</div></td>
     <td>&nbsp;</td>
-    <td><div id="HomePostcode">请输入家庭邮编</div></td>
+    <td><div id="postcodeHome">请输入家庭邮编</div></td>
   </tr>
 </table>
 <table width="100%" border="1" bgcolor="#AED7FF">
@@ -503,6 +802,7 @@ function checkall()
    
   </tr>
 </table>
+</form>
 <table width="50%" border="1">
   <tr>
     <td colspan="2"><a class="button button-block button-rounded button-highlight button-large" onClick="addRow()">添加简历+</a></td>
@@ -510,7 +810,7 @@ function checkall()
 </table>
 <table width="100%" border="1">
   <tr>
-    <td><a class="button button-block button-rounded button-primary button-large" >确认提交</a></td>
+    <td><a class="button button-block button-rounded button-primary button-large" onclick="checkall()" >确认提交</a></td>
   </tr>
 </table>
 <p>&nbsp;</p>
